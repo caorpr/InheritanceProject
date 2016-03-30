@@ -3,7 +3,7 @@ package ctec.model;
 import java.util.ArrayList;
 
 
-public abstract class Humans 
+public abstract class Humans implements RamenFlavor
 {
 
 	private double age;
