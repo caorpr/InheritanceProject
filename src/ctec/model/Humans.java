@@ -3,7 +3,7 @@ package ctec.model;
 import java.util.ArrayList;
 
 
-public abstract class Humans implements RamenFlavor, Comparable
+public abstract class Humans implements RamenFlavor, Comparable<RamenFlavor>
 {
 
 	private double age;
@@ -45,17 +45,15 @@ public abstract class Humans implements RamenFlavor, Comparable
 		return humanDescription;
 	}
 	
-	public int compareTo(Object compared)
+	public int compareTo(RamenFlavor compared)
 	{
-		int comparedValue = Integer.MIN_VALUE;
+		int comparedValue;
 		
-		if(compared instanceof RamenFlavor)
-		{
-			if(this.Price() < ((RamenFlavor) compared).Price())
+			if(this.Price() < compared.Price())
 			{
 				comparedValue = -1;
 			}
-			else if(this.Price() > ((RamenFlavor) compared).Price())
+			else if(this.Price() > compared.Price())
 			{
 				comparedValue = 1;
 			}
@@ -63,7 +61,7 @@ public abstract class Humans implements RamenFlavor, Comparable
 			{
 				comparedValue = 0;
 			}
-		}
+		
 		
 		return comparedValue;
 	}
