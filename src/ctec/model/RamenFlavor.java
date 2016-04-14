@@ -5,7 +5,8 @@ public interface RamenFlavor
 	public String IsItDelicious();
 	public double Price();
 	public void coolDownTime(int numberOfMinutes);
-	
+	public int compareTo(Object thing);
+		
 }
 
 
