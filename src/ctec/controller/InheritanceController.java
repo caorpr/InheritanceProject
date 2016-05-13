@@ -5,15 +5,23 @@ import java.util.ArrayList;
 import ctec.model.DonaldTrump;
 import ctec.model.MyMom;
 import ctec.model.RamenFlavor;
+import ctec.view.InheritanceFrame;
 
 public class InheritanceController 
 {
+	
+	
+	private InheritanceFrame baseFrame;
+	private ArrayList<RamenFlavor> ramenFlavors;
 
+	
 	
 	
 	public InheritanceController()
 	{
+		this.ramenFlavors = new ArrayList<RamenFlavor>();
 		makeRamenFlavorList();
+		baseFrame = new InheritanceFrame(this);
 	}
 	
 	private ArrayList<RamenFlavor> ramenFlavorList;
